@@ -1,0 +1,17 @@
+[
+    {
+      "todo": "Learn firebase basics",
+      "done": false,
+      "priority": 10
+    },
+    {
+      "todo": "Learn looping",
+      "done": false,
+      "priority": 10
+    },
+    {
+      "todo": "Learn looping",
+      "done": false,
+      "priority": 10
+    }
+]
