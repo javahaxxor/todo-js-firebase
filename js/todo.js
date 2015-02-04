@@ -1,50 +1,25 @@
-var fb = new Firebase("https://javahaxxor-todo.firebaseio.com/");
-var fb_todos = fb.child("todos");
-//fb.remove();
+/**
+ * Created by adyhasch on 1/19/15.
+ */
+var ToDo = ToDo || {
+    todo:"ChangeMe",
+    done:false,
+    priority:10
+};
 
-var todos =
-        [
-            {"todo":"Learn firebase basics", "done":false, "priority":10},
-            {"todo":"Learn looping", "done":false, "priority":10},
-            {"todo":"Learn looping", "done":false, "priority":10}
-        ]
-    ;
+var foo = {
+    todo:"ChangeMe",
+    done:false,
+    priority:10
+};
+//var ToDo = function () {
+//};
 
-document.getElementById("left").innerHTML = JSON.stringify(todos);
-document.getElementById("right").innerHTML = todos[0];
+//ToDo.prototype.todo = "ChangeMe";
+//ToDo.prototype.done = false;
+//ToDo.prototype.priority = 10;
 
-/*var elem1 = {name:"Learn firebase basics"};
- var elem2 = {name:"Learn looping"};
- fb_todos.push(elem1);
- fb_todos.push(elem2);*/
-
-todos.forEach(function(element) {
-    console.log('element:',element);
-    //fb_todos.push(element);
-});
-
-fb_todos.on("value", function(snapshot) {
-    var tmp = snapshot.val();
-    console.log("Snapshot" + JSON.stringify(snapshot.val()));
-    console.log("KEYS" + Object.keys(tmp));
-    for (var key in tmp) {
-        console.log("K"+JSON.stringify(tmp[key]));
-    }
-});
-
-fb_todos.on("child_added", function(data) {
-    var name = data.val() ? data.val().todo : "XX";
-    addToList(name)
-});
-
-
-function addToList(listElement) {
-    var log = document.getElementById("log") ;
-    log.innerHTML = log.innerHTML + "&#10;" + "Log: " + listElement;
-    var ul = document.getElementById("list");
-    var li = document.createElement("li");
-    li.appendChild(document.createTextNode(listElement));
-    //li.setAttribute("id",listElement.);
-    ul.appendChild(li);
-}
-
+/* Here in above code sample we have first checked whether MYAPP is already defined
+(either in same file or in another file). If yes, then use the existing MYAPP global
+object, otherwise create an empty object called MYAPP which will encapsulate method,
+    functions, variables and objects. */

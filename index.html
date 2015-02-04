@@ -6,15 +6,26 @@
     <title></title>
 </head>
 <body>
+<div id="frame" >
 <p id="left">Left</p>
 <p id="right">Right</p>
 <div id="label"></div>
-<input type="text"></input>
 <ul id="list">TODO</ul>
-<div>Log
-    <textarea id="log" width=200px></textarea>
+
+<div><br>
+    <div id="form" >
+        <form id="input">
+            <input type="text"  width="100" id="xxxx" placeholder="Add ToDo" autofocus>
+            <input type="submit" value="Add" onclick="addTodo()">
+        </form>
+    <br>
+        <label for="log">Log</label>
+    <textarea id="log"  rows="20" cols="40" ></textarea>
+    </div>
+</div>
 </div>
 </body>
 <script src="js/todo.js"></script>
+<script src="js/app.js"></script>
 
 </html>
