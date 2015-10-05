@@ -29,4 +29,3 @@ var o = Object.create({inherited: 1}, {
     }
 });
 
-o.foo; // "foobar"
